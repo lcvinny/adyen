@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lcvinny/adyen.png)](https://travis-ci.org/lcvinny/adyen)
+
 adyen
 =====
 
