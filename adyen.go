@@ -1,4 +1,4 @@
-// Package adyen provides redirect URL generation to set up a payment session for Adyen HPP
+// Package adyen provides redirect URL generation to setup a payment session for Adyen HPP
 //
 // For specification see:
 //
