@@ -6,7 +6,6 @@ import (
 )
 
 func fixture() (v url.Values) {
-
 	v = url.Values{}
 
 	v.Set("merchantAccount", "TestMerchant")
@@ -28,7 +27,7 @@ func fixture() (v url.Values) {
 func TestSignStr(t *testing.T) {
 	should := "10000GBP2007-10-20Internet Order 123454aD37dJATestMerchant2007-10-11T11:00:00Z"
 	if str := string(SignStr(fixture())); str != should {
-		t.Fatal("\n"+str, "\n"+should)
+		t.Fatalf("\n%s\n%s", str, should)
 	}
 }
 
@@ -36,7 +35,7 @@ func TestSignature(t *testing.T) {
 	key := "Kah942*$7sdp0)"
 	should := "x58ZcRVL1H6y+XSeBGrySJ9ACVo="
 	if str := Signature(key, SignStr(fixture())); str != should {
-		t.Fatal("\n"+str, "\n"+should)
+		t.Fatalf("\n%s\n%s", str, should)
 	}
 }
 
