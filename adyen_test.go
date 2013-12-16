@@ -10,13 +10,14 @@ func fixture() (v url.Values) {
 
 	v = url.Values{}
 
-	v.Set("paymentAmount", "10000")
-	v.Set("currencyCode", "GBP")
-	v.Set("shipBeforeDate", "2007-10-20")
-	v.Set("merchantReference", "Internet Order 12345")
+	v.Set("merchantAccount", "TestMerchant")
 	v.Set("skinCode", "4aD37dJA")
 
-	v.Set("merchantAccount", "TestMerchant")
+	v.Set("merchantReference", "Internet Order 12345")
+	v.Set("paymentAmount", "10000")
+	v.Set("currencyCode", "GBP")
+
+	v.Set("shipBeforeDate", "2007-10-20")
 	v.Set("sessionValidity", "2007-10-11T11:00:00Z")
 
 	v.Set("orderData", "H4sIAAAAAAAAALMpsOPlCkssyswvLVZIz89PKVZIzEtRKE4tKstMTi3W4+Wy0S+wAwDOGUCXJgAAAA==")
