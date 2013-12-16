@@ -1,7 +1,6 @@
 package adyen
 
 import (
-	"fmt"
 	"net/url"
 	"testing"
 )
@@ -42,7 +41,6 @@ func TestSignature(t *testing.T) {
 }
 
 func Example() {
-	endPoint := "https://test.adyen.com/hpp/select.shtml?"
 	key := "Kah942*$7sdp0)"
 	v := url.Values{}
 
@@ -69,7 +67,5 @@ func Example() {
 	// set signature parameter
 	v.Set("merchantSig", signature)
 
-	fmt.Println(endPoint + v.Encode())
-
-	// Output: https://test.adyen.com/hpp/select.shtml?currencyCode=GBP&merchantAccount=TestMerchant&merchantReference=Internet+Order+12345&merchantSig=x58ZcRVL1H6y%2BXSeBGrySJ9ACVo%3D&orderData=H4sIAAAAAAAAALMpsOPlCkssyswvLVZIz89PKVZIzEtRKE4tKstMTi3W4%2BWy0S%2BwAwDOGUCXJgAAAA%3D%3D&paymentAmount=10000&sessionValidity=2007-10-11T11%3A00%3A00Z&shipBeforeDate=2007-10-20&shopperLocale=en_GB&skinCode=4aD37dJA
+	// Output:
 }
